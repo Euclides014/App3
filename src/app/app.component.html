@@ -1,3 +1,33 @@
-<h1>
-  {{title}}
-</h1>
+<nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a routerLink="" class="navbar-brand">GTA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li routerLinkActive="active" class="nav-item">
+              <a routerLink="/login" class="nav-link">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li routerLinkActive="active" class="nav-item">
+              <a routerLink="/projetos"class="nav-link">Projetos</a>
+            </li>
+            <li routerLinkActive="active" class="nav-item">
+              <a routerLink="/meuperfil" class="nav-link">Perfil</a>
+            </li>
+            <li routerLinkActive="active" class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cadastros
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a routerLink="/pessoas" class="dropdown-item">Pessoas</a>
+                <a routerLink="/empresas" class="dropdown-item">Empresas</a>
+                <a routerLink="/equipamentos" class="dropdown-item">Equipamentos</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+</nav>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
